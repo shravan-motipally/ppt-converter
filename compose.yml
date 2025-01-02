@@ -1,0 +1,17 @@
+# Create a docker compose file here that will take the Dockerfile in the current directory
+# and create a container called ppt-converter that will run the Dockerfile.
+
+services:
+  ppt-converter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ppt-converter
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:3000:3000"
+    expose:
+      - 8080:8080
+      - 3000:3000
+    env_file:
+      - .env
