@@ -70,8 +70,3 @@ CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
 ## Run the fast api app
 #CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
-
-
-
-
-

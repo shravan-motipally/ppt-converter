@@ -40,7 +40,10 @@ class PowerpointExtractor:
                     image_bytes = image.blob
                     image_object = Image.open(BytesIO(image_bytes))
                     image_text = pytesseract.image_to_string(image_object)
-                    image_to_save = { "image_text": image_text, "image_object": image_object }
+                    image_to_save = {
+                        "image_text": image_text,
+                        "image_object": image_object,
+                    }
                     images.append(image_to_save)
 
             # Check if the shape has notes
